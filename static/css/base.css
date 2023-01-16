@@ -52,7 +52,7 @@ body {
 /* Home page */
 
 .bg-photo {
-    background-image: url('/static/img/pexels-pixabay-235922-1.jpg');
+    background-image: url('/media/pexels-pixabay-235922-1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,6 +64,9 @@ body {
     padding: 20px;
     max-width: 800px;
 }
+
+
+/* Media Queries */
 
 @media screen and (max-width: 660px ) {
     
