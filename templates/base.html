@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adventure racing for all. Rewarding challenges to stretch your limits. Travel the world and race amazing events. Challenge yourself!">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    {% block corejs %}
+        <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Endurance Republic | Adventure Racing</title>
+
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span class="er-logo">Endurance Republic</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse"
+                aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
+                <!-- Navigation for all Users -->
+                <ul class="navbar-nav mb-2 mb-lg-0 nav-text">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Trips
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                            <!-- {% for event in events %} -->
+                            <li><a class="dropdown-item" href="#"></a>
+                            </li>
+                            <!-- {% endfor %} -->
+                        </ul>
+                        <!-- Account link for authenticated Users -->
+                        <!-- {% if user.profile.id %} -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                    <!-- {% endif %} -->
+                    <!-- Admin functions for Superusers -->
+                    {% if user.is_superuser %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown1">
+                            <li><a class="dropdown-item" href="#">Admin Panel</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Add Event</a>
+                        </ul>
+                        {% endif %}
+                        <!-- Account functions for all authenticated Users -->
+                        {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- MESSAGE FEEDBACK FOR USER ACTIONS -->
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center">
+                {% for message in messages %}
+                <div class="alert alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                        aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <main>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-3 pb-1">
+        <p class="m-0 text-center">&copy; Mark Todman <span id="copyright"></span></p>
+        <p class="m-0 text-center">Follow us: <a href="https://facebook.com" target="_blank" rel="noopener"
+                aria-label="visit our Facebook page (opens in a new tab)"><i
+                    class="fab fa-facebook-square ms-3 text-white"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener"
+                aria-label="visit our Twitter page (opens in a new tab)"><i
+                    class="fab fa-twitter-square ms-3 text-white"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="visit our Instagram page (opens in a new tab)"><i
+                    class="fab fa-instagram-square ms-3 text-white"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener"
+                aria-label="visit our YouTube page (opens in a new tab)"><i
+                    class="fab fa-youtube-square ms-3 text-white"></i></a></p>
+    </footer>
+
+    <script>
+        // Scripts adapted from Code Institute provided code 
+        setTimeout(function () {
+            let messages = document.getElementById("msg");
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2000);
+        $("#copyright").text(new Date().getFullYear());
+    </script>
+
+{% block postloadjs %}
+{% endblock %}
+
+</body>
+
+</html>
