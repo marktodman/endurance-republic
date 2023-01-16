@@ -3,21 +3,15 @@ body {
     color: whitesmoke;
 }
 
-
 /* Navbar */
 
 .navbar {
-    letter-spacing: 0.25rem;
+    letter-spacing: 4px;
     background-color: #22577a;
     margin-bottom: 0;
     border: 0;
-    letter-spacing: 4px;
     opacity: 0.9;
     z-index: 1000;
-}
-
-.fixed-top {
-    margin-bottom: 10px;
 }
 
 .navbar li a,
@@ -38,18 +32,11 @@ body {
     color: whitesmoke !important;
 }
 
-.vv-logo {
-    font-family: 'Oleo Script Swash Caps', cursive;
+.er-logo-text {
+    font-family: 'Cabin Sketch', cursive;
     color: whitesmoke;
-    font-size: 4.0rem;
-    font-weight: 700;
-}
-
-.green-vert {
-    font-family: 'Oleo Script Swash Caps', cursive;
-    color: #c7f9cc;
-    font-size: 4.0rem;
-    font-weight: 700;
+    font-size: 2.0rem;
+    font-weight: 500;
 }
 
 .nav-text {
@@ -65,7 +52,7 @@ body {
 /* Home page */
 
 .bg-photo {
-    background-image: url('https://res.cloudinary.com/mt226/image/upload/v1661519817/pexels-rachel-claire-6760957-min_uyft32.jpg');
+    background-image: url('/static/img/pexels-pixabay-235922-1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,4 +63,18 @@ body {
     background-color: rgba(34, 87, 122, 0.7);
     padding: 20px;
     max-width: 800px;
+}
+
+@media screen and (max-width: 660px ) {
+    
+    #er-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px ) {
+
+    .er-logo-text {
+        font-size: 1.25rem;
+    }
 }
