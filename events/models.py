@@ -34,6 +34,7 @@ class Event(models.Model):
         'Location', max_length=200, blank=False, unique=False)
     date = models.DateField('Date')
     difficulty = models.IntegerField(choices=DIFFICULTY, default=3)
+    price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     published_status = models.IntegerField(choices=STATUS, default=0)
     featured_image = models.ImageField(null=True, blank=True)
 
