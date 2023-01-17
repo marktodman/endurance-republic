@@ -8,6 +8,10 @@ DIFFICULTY = ((0, "Super easy"), (1, "Easy"), (2, "Moderate"), (
 
 class Activity(models.Model):
     """Acitivty Model"""
+
+    class Meta:
+        verbose_name_plural = 'Activities'
+
     type = models.CharField(
         'Activity type', max_length=200, null=False, blank=False, unique=True)
     published_status = models.IntegerField(choices=STATUS, default=0)
@@ -17,8 +21,8 @@ class Activity(models.Model):
         return str(self.type)
 
 
-class Events(models.Model):
-    """Events Model"""
+class Event(models.Model):
+    """Event Model"""
     name = models.CharField(
         'Event Name', max_length=200, blank=False, unique=False)
     description = models.TextField('Description', blank=False, unique=False)
