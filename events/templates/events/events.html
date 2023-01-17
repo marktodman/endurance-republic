@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Page header -->
+<div class="container">
+    <div class="row pt-3">
+        <div class="col align-self-start">
+            <div class="mb-3">
+                <h3>Choose your next challenge:</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Route Cards-->
+<div class="container">
+    <div class="row">
+        {% for event in event_list %}
+        <div class="col-lg-4 col-md-6 my-4">
+            <div class="card h-100">
+                <img class="card-img-top image-responsive" src="{{ event.featured_image.url }}"
+                    alt="destination image" style="max-height: 300px">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-uppercase text-center">{{ event.name }}</h5>
+                    <p>{{ event.description }}</p>
+                    <p>Activity: {{ event.activity }}</p>
+                    <p>Location: {{ event.location }}</p>
+                    <p>Start date: {{ event.date }}</p>
+                    <p>Duration (days): {{ event.duration }}</p>
+                    <p>Distance (km): {{ event.distance }}</p>
+                    <p>Difficulty rating: {{ event.get_difficulty_display }}</p>
+                    <p>Event Price (£): {{ event.price }}</p>
+                    <a href="#" class="btn btn-primary mt-auto align-self-center">Book my place!</a>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+        <div class="row">
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -3,7 +3,7 @@ from django.db import models
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 DIFFICULTY = ((0, "Super easy"), (1, "Easy"), (2, "Moderate"), (
-    3, "Challenging"), (4, "Very challenge"), (5, "Extremely challenging"))
+    3, "Challenging"), (4, "Very challenging"), (5, "Extremely challenging"))
 
 
 class Activity(models.Model):
