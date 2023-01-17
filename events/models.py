@@ -23,6 +23,7 @@ class Activity(models.Model):
 
 class Event(models.Model):
     """Event Model"""
+    activity = models.ForeignKey('Activity', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(
         'Event Name', max_length=200, blank=False, unique=False)
     description = models.TextField('Description', blank=False, unique=False)
