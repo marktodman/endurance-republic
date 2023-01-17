@@ -17,7 +17,7 @@
 <div class="container">
     <div class="row">
         {% for event in event_list %}
-        <div class="col-lg-4 col-md-6 my-4">
+        <div class="col-lg-4 col-md-6 my-3">
             <div class="card h-100">
                 <img class="card-img-top image-responsive" src="{{ event.featured_image.url }}"
                     alt="destination image" style="max-height: 300px">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:3 %}
+        {% if forloop.counter|divisibleby:4 %}
         <div class="row">
         </div>
         {% endif %}
