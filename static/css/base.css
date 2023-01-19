@@ -113,6 +113,36 @@ body {
     border-color: #2654A1 !important;
 }
 
+/* Account cards */
+
+.account-link {
+    color: #EEE630;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.account-link:hover {
+    color: #8f2161;
+}
+
+.form-input label:not([for='id_remember']) {
+    display: none;
+}
+
+/* Crispy Forms */
+
+.asteriskField {
+    display: none;
+}
+
+.form-link {
+    color: #EEE630 !important;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    color: #8f2161 !important;
+}
 
 /* Media Queries */
 

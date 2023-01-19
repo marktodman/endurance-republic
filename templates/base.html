@@ -55,7 +55,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-xl navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><span><img src="{% static 'img/er-logo.png' %}"
+            <a class="navbar-brand" href="{% url 'home' %}"><span><img src="{% static 'img/er-logo.png' %}"
                         alt="Endurance Repulic Logo" class="img-fluid" id="er-logo"></span><span
                     class="er-logo-text align-middle ms-1">ENDURANCE REPUBLIC</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse"
@@ -66,24 +66,17 @@
                 <!-- Navigation for all Users -->
                 <ul class="navbar-nav mb-2 mb-lg-0 nav-text">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="{% url 'events' %}" aria-current="page">
                             Events
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
-                            <!-- {% for event in events %} -->
-                            <li><a class="dropdown-item" href="#"></a>
-                            </li>
-                            <!-- {% endfor %} -->
-                        </ul>
                         <!-- Account link for authenticated Users -->
                         <!-- {% if user.profile.id %} -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
-                    </li>
+                    </li> -->
                     <!-- {% endif %} -->
                     <!-- Admin functions for Superusers -->
                     {% if user.is_superuser %}

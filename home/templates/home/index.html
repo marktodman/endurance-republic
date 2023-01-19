@@ -10,6 +10,15 @@
                 <h1 class="mb-3 text-uppercase text-black">Get ready for your new adventure challenge!</h1>
                 <p class="mb-3">Exciting and achievable adventures in stunning locations.</p>
                 <p>Find your awesome and safely push your limits on one of our adventure events.</p>
+                <!-- If user already logged in show link to Events page -->
+                {% if user.is_authenticated %}
+                <a class="btn btn-dark btn-lg m-2" href="{% url 'events' %}" role="button">View Events</a>
+                {% else %}
+                <!-- If user not logged in show links to Routes, Register and Login -->
+                <a class="btn btn-dark btn-lg m-2" href="{% url 'events' %}" role="button">View Events</a>
+                <a class="btn btn-dark btn-lg m-2" href="{% url 'account_login' %}" role="button">Login</a>
+                <a class="btn btn-dark btn-lg m-2" href="{% url 'account_signup' %}" role="button">Register</a>
+                {% endif %}
             </div>
         </div>
     </div>
