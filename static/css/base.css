@@ -1,6 +1,8 @@
 body {
     background-color: #2654a1;
     color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
 }
 
 /* Navbar */
@@ -42,7 +44,7 @@ body {
 .nav-text {
     text-transform: uppercase;
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .navbar-toggler {

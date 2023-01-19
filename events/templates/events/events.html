@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row pt-3">
         <div class="col align-self-start">
-            <div class="mb-3">
+            <div class="mb-3 fw-bold">
                 <h3>Choose your next challenge:</h3>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <img class="card-img-top image-responsive" src="{{ event.featured_image.url }}"
                     alt="destination image" style="max-height: 300px">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title text-uppercase text-center">{{ event.name }}</h5>
+                    <h5 class="card-title text-uppercase text-center fw-bold">{{ event.name }}</h5>
                     <p>{{ event.description }}</p>
                     <p>Activity: {{ event.activity }}</p>
                     <p>Location: {{ event.location }}</p>
