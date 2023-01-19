@@ -110,14 +110,9 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: #4AB3E1 !important;
+    background-color: #4ab3e1 !important;
     color: white;
-    border-color: #2654A1 !important;
-}
-
-.btn-toggle {
-    background-color: green !important;
-    border-color: green !important;
+    border-color: #4ab3e1 !important;
 }
 
 /* Account forms */
@@ -149,6 +144,17 @@ body {
 
 .form-link:hover {
     color: #8f2161 !important;
+}
+
+/* Admin tables */
+
+.table {
+    color: #2654A1 !important;
+}
+
+.table-hover tbody tr:hover {
+    --bs-table-accent-bg: #EEE630;
+    color: #2654A1 !important;
 }
 
 /* Media Queries */
