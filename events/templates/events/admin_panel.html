@@ -23,6 +23,7 @@
                                         <th scope="col">Duration (days)</th>
                                         <th scope="col">Distance (km)</th>
                                         <th scope="col">Difficulty</th>
+                                        <th scope="col">Event price (£pp)</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Actions</th>
                                     </tr>
@@ -37,6 +38,7 @@
                                         <td>{{ event.duration }}</td>
                                         <td>{{ event.distance }}</td>
                                         <td>{{ event.get_difficulty_display }}</td>
+                                        <td>{{ event.price }}</td>
                                         <td>{{ event.get_published_status_display }}</td>
                                         <td><a class="btn btn-secondary btn-sm m-2"
                                                 href="{% url 'edit-event' event.id %}" role="button">Edit</a><a
