@@ -39,7 +39,7 @@
                                         <td>{{ event.get_difficulty_display }}</td>
                                         <td>{{ event.get_published_status_display }}</td>
                                         <td><a class="btn btn-secondary btn-sm m-2"
-                                                href="#" role="button">Edit</a><a
+                                                href="{% url 'edit-event' event.id %}" role="button">Edit</a><a
                                                 class="btn btn-danger btn-sm m-2"
                                                 href="#" role="button">Delete</a></td>
                                     </tr>

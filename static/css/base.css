@@ -137,12 +137,12 @@ body {
     display: none;
 }
 
-.form-link {
+.form-link a {
     color: #EEE630 !important;
     text-decoration: none;
 }
 
-.form-link:hover {
+.form-link a:hover {
     color: #8f2161 !important;
 }
 
