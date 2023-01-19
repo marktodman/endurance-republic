@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1 class="text-center text-uppercase">Admin Panel</h1>
+<div class="container mt-4">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <!-- Table of all Routes in Database with Edit and Delete functionality -->
+            <div class="container mt-4">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <h2 class="text-center">Eventss</h2>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover table-bordered table-light mt-3 mb-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Event Name</th>
+                                        <th scope="col">Activity</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">Duration (days)</th>
+                                        <th scope="col">Distance (km)</th>
+                                        <th scope="col">Difficulty</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for event in events %}
+                                    <tr>
+                                        <td>{{ event.name}}</td>
+                                        <td>{{ event.activity }}</td>
+                                        <td>{{ event.location }}</td>
+                                        <td>{{ event.date }}</td>
+                                        <td>{{ event.distance }}</td>
+                                        <td>{{ event.duration }}</td>
+                                        <td>{{ event.get_difficulty_display }}</td>
+                                        <td>{{ event.get_published_status_display }}</td>
+                                        <td><a class="btn btn-secondary btn-sm m-2"
+                                                href="#" role="button">Edit</a><a
+                                                class="btn btn-danger btn-sm m-2"
+                                                href="#" role="button">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
