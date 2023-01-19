@@ -5,8 +5,12 @@ from allauth.account.forms import SignupForm
 # Add custom fields to the allauth signup form
 class CustomSignupForm(SignupForm):
 
-    first_name = forms.CharField(max_length=50, label='First Name')
-    last_name = forms.CharField(max_length=50, label='Last Name')
+    first_name = forms.CharField(
+        max_length=50, label='First Name', widget=forms.TextInput(
+            attrs={'placeholder': 'First Name'}))
+    last_name = forms.CharField(
+        max_length=50, label='Last Name', widget=forms.TextInput(
+            attrs={'placeholder': 'Last Name'}))
 
     def save(self, request):
         user = super(CustomSignupForm, self).save(request)
