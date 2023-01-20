@@ -43,7 +43,7 @@
                                         <td><a class="btn btn-secondary btn-sm m-2"
                                                 href="{% url 'edit-event' event.id %}" role="button">Edit</a><a
                                                 class="btn btn-danger btn-sm m-2"
-                                                href="#" role="button">Delete</a></td>
+                                                href="{% url 'delete-event' event.id %}" role="button">Delete</a></td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>

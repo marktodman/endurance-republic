@@ -70,7 +70,7 @@ def edit_event(request, event_id):
 
 
 # Add Event
-@login_required()
+@login_required
 def add_event(request):
     """Superuser can add an event to the database from the frontend"""
 
@@ -82,6 +82,8 @@ def add_event(request):
             form = EventForm(request.POST, request.FILES)
             if form.is_valid():
                 form.save()
+                messages.success(request, (
+                    'Success! The event has been added to the database'))
                 return HttpResponseRedirect('?submitted=True')
         else:
             form = EventForm
@@ -94,6 +96,35 @@ def add_event(request):
             }
 
         return render(request, 'events/add_event.html', context)
+
+    # For non-superusers trying to access the page
+    else:
+        messages.success(request, (
+            'Access denied. Please sign in as an admin.'))
+        return redirect('home')
+
+
+# Delete Event
+@login_required
+def delete_event(request, event_id):
+    """Superuser can delete an Event"""
+
+    # This page can only be accessed by a superuser
+    if request.user.is_superuser:
+        event = Event.objects.get(id=event_id)
+
+        # Check that user really wants to delete this route
+        if request.method == 'POST':
+            event.delete()
+            messages.success(request, (
+                'Success! The event has been deleted from the database'))
+            return redirect('admin-panel')
+
+        context = {
+                'event': event
+                }
+
+        return render(request, 'events/delete_event.html', context)
 
     # For non-superusers trying to access the page
     else:
