@@ -47,7 +47,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
-    <title>Endurance Republic | Adventure Racing</title>
+    <title>Endurance Republic | Adventure Events</title>
 
 </head>
 
@@ -74,12 +74,12 @@
                         </a>
                         <!-- Account link for authenticated Users -->
                         <!-- {% if user.profile.id %} -->
-                    <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
                     </li> -->
-                    <!-- {% endif %} -->
-                    <!-- Admin functions for Superusers -->
-                    {% if user.is_superuser %}
+                        <!-- {% endif %} -->
+                        <!-- Admin functions for Superusers -->
+                        {% if user.is_superuser %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -155,10 +155,8 @@
         }, 2000);
         $("#copyright").text(new Date().getFullYear());
     </script>
-
     {% block postloadjs %}
     {% endblock %}
-
 </body>
 
 </html>

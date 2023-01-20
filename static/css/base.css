@@ -157,6 +157,25 @@ body {
     color: #2654A1 !important;
 }
 
+/* Mailchimp */
+
+#mc_embed_signup {
+    margin: 1.0rem;
+}
+
+#mc_embed_signup .asterisk {
+    color: red !important;
+}
+
+#mc_embed_signup input {
+    width: 250px !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    background-color: transparent;
+    color: #EEE630;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 660px) {
@@ -174,5 +193,9 @@ body {
 
     .nav-text {
         font-size: 0.75rem;
+    }
+
+    .btn-hidden {
+        display: none;
     }
 }
