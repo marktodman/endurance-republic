@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from .models import Activity, Event
 from django.views.generic import ListView
 from .forms import EventForm
@@ -60,6 +61,39 @@ def edit_event(request, event_id):
             }
 
         return render(request, 'events/edit_event.html', context)
+
+    # For non-superusers trying to access the page
+    else:
+        messages.success(request, (
+            'Access denied. Please sign in as an admin.'))
+        return redirect('home')
+
+
+# Add Event
+@login_required()
+def add_event(request):
+    """Superuser can add an event to the database from the frontend"""
+
+    # This page can only be accessed by a superuser
+    if request.user.is_superuser:
+        submitted = False
+
+        if request.method == "POST":
+            form = EventForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect('?submitted=True')
+        else:
+            form = EventForm
+            if 'submitted' in request.GET:
+                submitted = True
+
+        context = {
+            'form': form,
+            'submitted': submitted
+            }
+
+        return render(request, 'events/add_event.html', context)
 
     # For non-superusers trying to access the page
     else:

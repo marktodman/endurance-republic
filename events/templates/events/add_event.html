@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Can only be accessed by a Superuser -->
+{% if user.is_superuser %}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="text-white text-center">
+        <!-- If the form is submitted provide options -->
+        {% if submitted %}
+        <h2>Your new event was added to the database</h2>
+        <a class="btn btn-primary btn-lg m-2" href="{% url 'add-event' %}" role="button">Add another event</a>
+        <a class="btn btn-primary btn-lg m-2" href="{% url 'events' %}" role="button">View Events</a>
+        <a class="btn btn-primary btn-lg m-2" href="{% url 'admin-panel' %}" role="button">Admin Panel</a>
+        {% else %}
+        <!-- Add Route Form -->
+        <h1 class="mb-3">Add an Event to the Database</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form | crispy }}
+
+            <button class="btn btn-primary mb-2 mt-3" type="submit">Add Event</button>
+        </form>
+        <a class="btn btn-primary mb-2 mt-3" href="{% url 'admin-panel' %}" role="button">Return to Admin Panel without
+            Adding</a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}

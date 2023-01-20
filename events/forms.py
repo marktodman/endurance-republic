@@ -8,3 +8,7 @@ class EventForm(ModelForm):
     class Meta:
         model = Event
         fields = '__all__'
+        widgets = {
+            'date': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'YYYY-MM-DD'}),
+                }
