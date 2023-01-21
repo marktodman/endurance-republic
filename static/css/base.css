@@ -131,6 +131,16 @@ body {
     display: none;
 }
 
+/* Shopping Cart Icon */
+
+.shopping {
+    color: #eee630;
+}
+
+.shopping:hover {
+    color: #4ab3e1;
+}
+
 /* Crispy Forms */
 
 .asteriskField {
