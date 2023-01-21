@@ -23,7 +23,8 @@
                 <img class="card-img-top image-responsive" src="{{ event.featured_image.url }}" alt="{{ event.name }}"
                     style="max-height: 300px">
                 {% else %}
-                <img class="card-img-top image-responsive" src="/media/noimage.png" alt="{{ event.name }}" style="max-height: 300px">
+                <img class="card-img-top image-responsive" src="/media/noimage.png" alt="{{ event.name }}"
+                    style="max-height: 300px">
                 {% endif %}
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-uppercase text-center fw-bold">{{ event.name }}</h5>
@@ -35,7 +36,14 @@
                     <p>Distance (km): {{ event.distance }}</p>
                     <p>Difficulty rating: {{ event.get_difficulty_display }}</p>
                     <p>Event Price (£pp): {{ event.price }}</p>
-                    <a href="#" class="btn btn-primary mt-auto align-self-center">Book my place!</a>
+                    <div class="d-flex justify-content-center mt-auto">
+                        <form class="form" action="{% url 'add-to-bag' event.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-primary mt-auto align-self-center"
+                                value="Book My Place!">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
