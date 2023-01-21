@@ -14,7 +14,7 @@
         <a class="btn btn-primary btn-lg m-2" href="{% url 'events' %}" role="button">View Events</a>
         <a class="btn btn-primary btn-lg m-2" href="{% url 'admin-panel' %}" role="button">Admin Panel</a>
         {% else %}
-        <!-- Add Route Form -->
+        <!-- Add Event Form -->
         <h1 class="mb-3">Add an Event to the Database</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
