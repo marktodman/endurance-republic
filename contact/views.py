@@ -16,7 +16,7 @@ def contact(request):
             messages.success(request, (
                 'Success! Your contact request has been sent. \
                     We will get back to you soon!'))
-            return HttpResponseRedirect('?submitted=True')
+            return HttpResponseRedirect('/contact?submitted=True')
     else:
         form = ContactForm
         if 'submitted' in request.GET:
