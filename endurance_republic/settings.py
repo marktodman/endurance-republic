@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'events',
     'contact',
+    'bag',
     'crispy_forms',
 ]
 

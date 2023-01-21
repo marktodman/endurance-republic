@@ -110,6 +110,13 @@
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
+                            <div>
+                                <div><i class="fas fa-shopping-cart"></i></div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
