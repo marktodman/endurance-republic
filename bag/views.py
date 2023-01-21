@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 
 # Modified from Code Institute Boutique Ado Walkthrough
@@ -20,6 +21,9 @@ def add_to_bag(request, event_id):
         bag[event_id] += quantity
     else:
         bag[event_id] = quantity
+
+    messages.success(request, (
+                    'Success! Your event has been added to your cart'))
 
     request.session['bag'] = bag
     print(request.session['bag'])
