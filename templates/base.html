@@ -113,7 +113,12 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
                             <div>
-                                
+                                {% if event_count > 0 %}
+                                <div><i class="fas fa-cart-plus shopping mb-0"></i>
+                                <p class="shopping text-cart mt-0">{{ event_count }}</p></div>
+                                {% else %}
+                                <div><i class="fas fa-shopping-cart"></i></div>
+                                {% endif %}
                             </div>
                         </a>
                     </li>
