@@ -18,11 +18,13 @@ def add_to_bag(request, event_id):
     bag = request.session.get('bag', {})
 
     if event_id in list(bag.keys()):
-        bag[event_id] += quantity
+        messages.success(request, (
+            'Sorry, you cannot book more than one place \
+                on each event! Contact us and we will help arrange your \
+                    booking.'))
     else:
         bag[event_id] = quantity
-
-    messages.success(request, (
+        messages.success(request, (
                     'Success! Your event has been added to your cart'))
 
     request.session['bag'] = bag

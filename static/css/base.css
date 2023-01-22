@@ -122,6 +122,11 @@ body {
     width: 200px !important;
 }
 
+.btn-remove {
+    font-size: 0.75rem !important;
+    padding: 0.3rem !important;
+}
+
 /* Account forms */
 
 .account-link {
