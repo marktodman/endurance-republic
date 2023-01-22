@@ -141,6 +141,12 @@ body {
     color: #4ab3e1;
 }
 
+.text-cart {
+    font-family: sans-serif;
+    font-size: small;
+    text-align: center; 
+}
+
 /* Crispy Forms */
 
 .asteriskField {
@@ -188,14 +194,33 @@ body {
 
 /* Media Queries */
 
+@media screen and (max-width: 1200px) {
+
+    .text-cart {
+        text-align: left;
+        margin-left: 10px;
+    }
+}
+
 @media screen and (max-width: 660px) {
 
     #er-logo {
         display: none;
     }
+
+    .text-cart {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .btn-reduced {
+        font-size: 1rem;
+        margin: 2px !important;
+        padding: 5px !important;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
     .er-logo-text {
         font-size: 1.25rem;
@@ -205,7 +230,21 @@ body {
         font-size: 0.75rem;
     }
 
-    .btn-hidden {
-        display: none;
+    .bg-photo {
+        height: 85vh;
+    }
+    
+    .home-overlay {
+        padding: 10px;
+        max-width: 800px;
+    }
+
+    .footer {
+        margin-top: 0px !important;
+    }
+
+    .text-cart {
+        text-align: left;
+        margin-left: 2px;
     }
 }

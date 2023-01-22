@@ -12,12 +12,12 @@
                 <p>Find your awesome and safely push your limits on one of our adventure events.</p>
                 <!-- If user already logged in show link to Events page -->
                 {% if user.is_authenticated %}
-                <a class="btn btn-dark btn-lg m-2" href="{% url 'events' %}" role="button">View Events</a>
+                <a class="btn btn-dark btn-lg m-2 btn-reduced" href="{% url 'events' %}" role="button">View Events</a>
                 {% else %}
-                <!-- If user not logged in show links to Routes, Register and Login -->
-                <a class="btn btn-dark btn-lg m-2 btn-hidden" href="{% url 'events' %}" role="button">View Events</a>
-                <a class="btn btn-dark btn-lg m-2 btn-hidden" href="{% url 'account_login' %}" role="button">Login</a>
-                <a class="btn btn-dark btn-lg m-2 btn-hidden" href="{% url 'account_signup' %}" role="button">Register</a>
+                <!-- If user not logged in show links to Events, Register and Login -->
+                <a class="btn btn-dark btn-lg m-2 btn-reduced" href="{% url 'events' %}" role="button">View Events</a>
+                <a class="btn btn-dark btn-lg m-2 btn-reduced" href="{% url 'account_login' %}" role="button">Login</a>
+                <a class="btn btn-dark btn-lg m-2 btn-reduced" href="{% url 'account_signup' %}" role="button">Register</a>
                 {% endif %}
             </div>
         </div>
@@ -45,7 +45,7 @@
                         <div class="optionalParent">
                             <div class="clear foot">
                                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                    class="btn btn-primary btn-lg m-2">
+                                    class="btn btn-primary btn-lg m-2 btn-reduced">
                             </div>
                         </div>
                     </div>

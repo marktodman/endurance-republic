@@ -26,5 +26,5 @@ def add_to_bag(request, event_id):
                     'Success! Your event has been added to your cart'))
 
     request.session['bag'] = bag
-    print(request.session['bag'])
+
     return redirect(redirect_url)
