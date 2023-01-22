@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 
 
@@ -30,3 +30,18 @@ def add_to_bag(request, event_id):
     request.session['bag'] = bag
 
     return redirect(redirect_url)
+
+
+# Modified from Code Institute Boutique Ado Walkthrough
+def remove_from_bag(request, event_id):
+    """Remove the event from the shopping bag"""
+
+    try:
+        bag = request.session.get('bag', {})
+        bag.pop(event_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)

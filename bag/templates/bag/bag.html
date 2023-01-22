@@ -79,13 +79,13 @@
             </div>
             {% else %}
             <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'events' %}" class="btn btn-primary btn-lg">
+            <a href="{% url 'events' %}" class="btn btn-dark btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Search Events</span>
+                    <span class="text-uppercase">Browse Events</span>
             </a>
             {% endif %}
         </div>
@@ -101,7 +101,7 @@
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var eventId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${eventId}`;
+        var url = `/bag/remove/${eventId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
         };
