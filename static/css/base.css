@@ -115,6 +115,13 @@ body {
     border-color: #4ab3e1 !important;
 }
 
+.btn-checkout {
+    font-size: 1rem;
+    margin: 2px !important;
+    padding: 5px !important;
+    width: 200px !important;
+}
+
 /* Account forms */
 
 .account-link {
@@ -218,6 +225,19 @@ body {
         margin: 2px !important;
         padding: 5px !important;
     }
+
+    .btn-checkout {
+        font-size: 0.75rem;
+        margin: 2px !important;
+        padding: 2px !important;
+        width: 100px !important;
+    }
+}
+
+/* Bag */
+
+.table {
+    color: whitesmoke !important;
 }
 
 @media screen and (max-width: 450px) {
