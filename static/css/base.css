@@ -204,6 +204,12 @@ body {
     color: #EEE630;
 }
 
+/* Bag */
+
+.bag-table {
+    color: whitesmoke !important;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
@@ -237,12 +243,6 @@ body {
         padding: 2px !important;
         width: 100px !important;
     }
-}
-
-/* Bag */
-
-.table {
-    color: whitesmoke !important;
 }
 
 @media screen and (max-width: 450px) {

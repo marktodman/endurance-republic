@@ -23,7 +23,7 @@
                 <img class="card-img-top image-responsive" src="{{ event.featured_image.url }}" alt="{{ event.name }}"
                     style="max-height: 300px">
                 {% else %}
-                <img class="card-img-top image-responsive" src="/media/noimage.png" alt="{{ event.name }}"
+                <img class="card-img-top image-responsive" src="{{ MEDIA_URL }}noimage.png" alt="{{ event.name }}"
                     style="max-height: 300px">
                 {% endif %}
                 <div class="card-body d-flex flex-column">
