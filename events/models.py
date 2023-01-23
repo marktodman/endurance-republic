@@ -6,6 +6,7 @@ DIFFICULTY = ((0, "Super easy"), (1, "Easy"), (2, "Moderate"), (
     3, "Challenging"), (4, "Very challenging"), (5, "Extremely challenging"))
 
 
+# Customer model for creating Activities
 class Activity(models.Model):
     """Acitivty Model"""
 
@@ -21,9 +22,11 @@ class Activity(models.Model):
         return str(self.type)
 
 
+# Customer model for creating Events associated with Activities
 class Event(models.Model):
     """Event Model"""
-    activity = models.ForeignKey('Activity', null=True, blank=True, on_delete=models.SET_NULL)
+    activity = models.ForeignKey(
+        'Activity', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(
         'Event Name', max_length=200, blank=False, unique=False)
     description = models.TextField('Description', blank=False, unique=False)
