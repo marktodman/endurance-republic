@@ -3,7 +3,6 @@
 
 
 {% block content %}
-<!-- Code edited from Code Institutue Boutique Ado template -->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -91,24 +90,24 @@
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
-<div class="float-end">
-                <div class="submit-button">
-                    <a href="{% url 'bag' %}" class="btn btn-dark btn-checkout">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust Order</span>
-                    </a>
-                    <button id="submit-button" class="btn btn-primary btn-checkout">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
-                </div>
+                <div class="float-end">
+                    <div class="submit-button">
+                        <a href="{% url 'bag' %}" class="btn btn-dark btn-checkout">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="font-weight-bold">Adjust Order</span>
+                        </a>
+                        <button id="submit-button" class="btn btn-primary btn-checkout">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </button>
+                    </div>
                     <p class="small payment-text float-end">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
@@ -120,6 +119,4 @@
         </div>
     </div>
 </div>
-</div>
-
 {% endblock %}
