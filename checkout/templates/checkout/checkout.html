@@ -15,7 +15,8 @@
 
 
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last">
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <h4>Order Summary ({{ event_count }})</h4>
             <div class="table-responsive">
                 <table class="bag-table table mt-3 mb-3">
                     <thead>
@@ -50,7 +51,7 @@
         </div>
 
         <div class="col-12 col-lg-6">
-            <h3>Please fill out the form below to complete your order</h3>
+            <h4>Please fill out the form below to complete your order</h4>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
@@ -68,7 +69,7 @@
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
-                    <div class="form-check form-check-inline float-right mr-0">
+                    <div class="form-check form-check-inline float-end">
                         {% if user.is_authenticated %}
                         <label class="form-check-label" for="id-save-info">Save this delivery information to my
                             profile</label>
@@ -82,7 +83,7 @@
                         {% endif %}
                     </div>
                 </fieldset>
-                <fieldset class="px-3">
+                <fieldset class="px-2">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
@@ -90,21 +91,25 @@
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
-
-                <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'bag' %}" class="btn btn-outline-black rounded-0">
+<div class="float-end">
+                <div class="submit-button">
+                    <a href="{% url 'bag' %}" class="btn btn-dark btn-checkout">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Cart</span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Adjust Order</span>
                     </a>
-                    <button id="submit-button" class="btn btn-black rounded-0">
+                    <button id="submit-button" class="btn btn-primary btn-checkout">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </button>
-                    <p class="small text-danger my-0">
+                </div>
+                    <p class="small payment-text float-end">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
