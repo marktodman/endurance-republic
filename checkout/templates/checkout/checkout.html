@@ -24,7 +24,7 @@
                             <th></th>
                             <th scope="col">Date</th>
                             <th></th>
-                            <th scope="col">Event price (£pp)</th>
+                            <th scope="col">Event price</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Order Total : </td>
+                            <td>Order Total:</td>
                             <td>£{{ total|floatformat:2 }}</td>
                         </tr>
                     </tbody>
@@ -56,6 +56,12 @@
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     {{ order_form.first_name | as_crispy_field }}
+                    {{ order_form.last_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Additional details</legend>
+                    {{ order_form.emergency_contact | as_crispy_field }}
                     {{ order_form.last_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>

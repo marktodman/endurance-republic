@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from phonenumber_field.modelfields import PhoneNumberField
 
 from events.models import Event
 
@@ -22,6 +23,7 @@ class Order(models.Model):
     postcode = models.CharField(max_length=20, null=True, blank=True)
     emergency_contact = models.CharField(
         max_length=50, null=False, blank=False)
+    emergency_number = PhoneNumberField(null=False, blank=False)
     medical = models.TextField(null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     total = models.DecimalField(
