@@ -7,6 +7,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('first_name', 'last_name','email', 'phone_number',
+                'emergency_contact', 'emergency_number', 'medical',
                 'street_address1', 'street_address2',
                 'town_or_city', 'county', 'country', 'postcode',)
 
@@ -27,6 +28,9 @@ class OrderForm(forms.ModelForm):
             'county': 'County',
             'country': 'Country',
             'postcode': 'Postal Code',
+            'emergency_contact': 'Emergency Contact',
+            'emergency_number': 'Emergency Contact Phone Number',
+            'medical': 'Medical Information - please confirm None or add details',
         }
 
         self.fields['first_name'].widget.attrs['autofocus'] = True
