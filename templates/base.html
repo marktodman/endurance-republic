@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Adventure racing for all. Rewarding challenges to stretch your limits. Travel the world and race amazing events. Challenge yourself!">
-    <meta name="keywords" content="adventure, challenge, racing, events, marathon, kayaking, running">
+    <meta name="keywords"
+        content="adventure, challenge, racing, events, marathon, kayaking, running, outdoors, experience, adventure challenge, adventure experience">
     <meta name="author" content="Mark Todman">
     {% endblock %}
 
@@ -33,12 +34,16 @@
 
     {% block corejs %}
     <!-- JS -->
+    <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -111,11 +116,13 @@
                     </li>
                     {% endif %}
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'bag' %}">
                             <div>
                                 {% if event_count > 0 %}
                                 <div><i class="fas fa-cart-plus shopping mb-0"></i>
-                                <p class="shopping text-cart mt-0">{{ event_count }}</p></div>
+                                    <p class="shopping text-cart mt-0">{{ event_count }}</p>
+                                </div>
                                 {% else %}
                                 <div><i class="fas fa-shopping-cart"></i></div>
                                 {% endif %}

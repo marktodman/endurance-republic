@@ -30,7 +30,7 @@ class OrderForm(forms.ModelForm):
             'postcode': 'Postal Code',
             'emergency_contact': 'Emergency Contact',
             'emergency_number': 'Emergency Contact Phone Number',
-            'medical': 'Medical Information - please confirm None or add details',
+            'medical': 'Medical Information - confirm None or add details',
         }
 
         self.fields['first_name'].widget.attrs['autofocus'] = True
