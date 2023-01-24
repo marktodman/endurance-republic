@@ -63,6 +63,21 @@
 
                 <div class="row">
                     <div class="col">
+                        <small class="shopping">Order Total:</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 font-weight-bold">Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">£{{ order.total }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
                         <small class="shopping">Participant:</small>
                     </div>
                 </div>
@@ -137,7 +152,6 @@
                 {% endif %}
 
 
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 font-weight-bold">Phone Number</p>
@@ -149,16 +163,25 @@
 
                 <div class="row">
                     <div class="col">
-                        <small class="shopping">Order info:</small>
+                        <small class="shopping">Emergency Contact Details:</small>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <p class="mb-0 font-weight-bold">Order Total</p>
+                        <p class="mb-0 font-weight-bold">Emergency Contact</p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
-                        <p class="mb-0">£{{ order.total }}</p>
+                        <p class="mb-0">{{ order.emergency_contact }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 font-weight-bold">Emergency Phone number</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.emergency_number }}</p>
                     </div>
                 </div>
 
