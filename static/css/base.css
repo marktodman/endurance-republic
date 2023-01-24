@@ -251,7 +251,7 @@ body {
 
 /* Media Queries */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1260px) {
 
     .text-cart {
         text-align: left;
