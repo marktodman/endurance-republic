@@ -26,7 +26,7 @@ class OrderForm(forms.ModelForm):
             'town_or_city': 'Town or City',
             'county': 'County',
             'country': 'Country',
-            'postcode': 'Postal Code',
+            'postcode': 'Post Code',
             'emergency_contact': 'Emergency Contact',
             'emergency_number': 'Emergency Contact Phone Number',
             'medical': 'Medical Information - confirm None or add details',
