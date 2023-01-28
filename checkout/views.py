@@ -114,6 +114,9 @@ def checkout(request):
                 'street_address1': profile.default_street_address1,
                 'street_address2': profile.default_street_address2,
                 'county': profile.default_county,
+                'emergency_contact': profile.default_emergency_contact,
+                'emergency_number': profile.default_emergency_number,
+                'medical': profile.default_medical,
             })
         except UserProfile.DoesNotExist:
             order_form = OrderForm()
