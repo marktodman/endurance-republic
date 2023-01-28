@@ -25,7 +25,7 @@ class UserProfileForm(forms.ModelForm):
             'default_postcode': 'Post Code',
             'default_country': 'Country',
             'default_emergency_contact': 'Emergency Contact',
-            'default_emergency_number': "Emergency Phone (incl. country code, e.g. '+44')",
+            'default_emergency_number': 'Emergency Contact Phone Number',
             'default_medical': 'Medical Information - confirm None or add details',
         }
 

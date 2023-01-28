@@ -16,6 +16,7 @@ class EventList(ListView):
 
 
 # Admin Panel
+@login_required
 def admin_panel(request):
     """Superuser can view all events on the database from the frontend"""
 

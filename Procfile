@@ -1,0 +1,1 @@
+web: gunicorn endurance_republic.wsgi:application
