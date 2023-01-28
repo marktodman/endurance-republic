@@ -280,6 +280,22 @@ select option[value=""] {
     color: #aab7c4;
 }
 
+/* Profile */
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: black;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4 !important;
+}
+
+.profile-form-input::placeholder {
+    color: #aab7c4;
+
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1260px) {
