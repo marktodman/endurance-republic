@@ -110,7 +110,7 @@
                     </li>
                     {% endif %}
                     <!-- Account link for authenticated Users -->
-                    {% if userprofile.id %} -->
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="#"><div><i class="fas fa-user"></i></div></a>
                     </li>
