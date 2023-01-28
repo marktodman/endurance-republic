@@ -70,9 +70,6 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarcollapse">
                 <!-- Navigation for all Users -->
                 <ul class="navbar-nav mb-2 mb-lg-0 nav-text">
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="{% url 'home' %}"><div><i class="fas fa-home"></i></div></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'events' %}" aria-current="page">
                             Events
@@ -109,7 +106,11 @@
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-                    <!-- Account link for authenticated Users -->
+                    <!-- Home icon -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="{% url 'home' %}"><div><i class="fas fa-home"></i></div></a>
+                    </li>
+                    <!-- Profile icon for authenticated Users -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}"><div><i class="fas fa-user"></i></div></a>
