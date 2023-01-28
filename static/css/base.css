@@ -296,6 +296,11 @@ select option[value=""] {
 
 }
 
+.order-summary {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1260px) {

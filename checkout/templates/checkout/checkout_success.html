@@ -184,9 +184,39 @@
                         <p class="mb-0 float-end">{{ order.emergency_number }}</p>
                     </div>
                 </div>
-
             </div>
+
+            {% if from_profile %}
+            <div class="float-end mt-2">
+                <div class="submit-button">
+                    <a href="{% url 'profile' %}" class="btn btn-primary">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Back to Profile</span>
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div class="float-end mt-2">
+                <div class="submit-button">
+                    <a href="{% url 'events' %}" class="btn btn-primary">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Browse more Events</span>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
+
 {% endblock %}

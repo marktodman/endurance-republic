@@ -13,33 +13,68 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-muted payment-text">Default Address Information</p>
+            <h4 class="text-muted payment-text">Default Address Information</h4>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="float-end"><button class="btn btn-primary">Update Information</button></div>
             </form>
         </div>
-        <div class="col-12 col-lg-6">
-            <p class="text-muted payment-text">Order History</p>
-            {{ orders }}
-        </div>
-    </div>
-    {% endblock %}
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        let countrySelected = $('#id_default_country').val();
-        if (!countrySelected) {
-            $('#id_default_country').css('color', '#aab7c4');
-        };
-        $('#id_default_country').change(function () {
-            countrySelected = $(this).val();
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <h4 class="text-muted payment-text">Order Summary</h4>
+            <div class="table-responsive order-summary">
+                <table class="bag-table table mt-3 mb-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Number</th>
+                            <th scope="col">Date</th>
+                            <th></th>
+                            <th scope="col">Event</th>
+                            <th></th>
+                            <th scope="col">Order Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr class="form-link">
+                            <td><a href="{% url 'order_history' order.order_number %}"
+                                    title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            <td></td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                    <li>
+                                        {{ item.event.name }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td></td>
+                            <td>£{{ order.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block postloadjs %}
+        <script type="text/javascript">
+            let countrySelected = $('#id_default_country').val();
             if (!countrySelected) {
-                $(this).css('color', '#aab7c4');
-            } else {
-                $(this).css('color', '#000');
-            }
-        });
-    </script>
-    {% endblock %}
+                $('#id_default_country').css('color', '#aab7c4');
+            };
+            $('#id_default_country').change(function () {
+                countrySelected = $(this).val();
+                if (!countrySelected) {
+                    $(this).css('color', '#aab7c4');
+                } else {
+                    $(this).css('color', '#000');
+                }
+            });
+        </script>
+        {% endblock %}
