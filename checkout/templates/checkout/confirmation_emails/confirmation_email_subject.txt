@@ -1,0 +1,1 @@
+You are booked on your next Endurance Republic adventure confirmation for Order Number {{ order.order_number }}

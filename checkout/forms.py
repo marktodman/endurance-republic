@@ -27,7 +27,7 @@ class OrderForm(forms.ModelForm):
             'county': 'County, State or Locality',
             'postcode': 'Post Code',
             'emergency_contact': 'Emergency Contact',
-            'emergency_number': "Emergency Number (include international code, e.g. '+44')",
+            'emergency_number': 'Emergency Contact Phone Number',
             'medical': 'Medical Information - confirm None or add details',
         }
 
