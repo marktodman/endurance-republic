@@ -139,10 +139,6 @@ body {
     color: #8f2161;
 }
 
-.form-input label:not([for='id_remember']) {
-    display: none;
-}
-
 /* Shopping Cart Icon */
 
 .shopping {

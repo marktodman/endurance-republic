@@ -7,7 +7,6 @@ from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-# Edited from source: Code Institute Boutique Ado
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
