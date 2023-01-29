@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profiles/
+Sitemap: https://endurance-republic.herokuapp.com/sitemap.xml
