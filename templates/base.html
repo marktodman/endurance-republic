@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Adventure racing for all. Rewarding challenges to stretch your limits. Travel the world and race amazing events. Challenge yourself!">
+        content="Adventure racing for all. Rewarding challenges to stretch your limits. Travel the world and race amazing events. Challenge yourself in beautiful locations.">
     <meta name="keywords"
-        content="adventure, challenge, racing, events, marathon, kayaking, running, outdoors, experience, adventure challenge, adventure experience">
+        content="adventure, challenge, racing, race, endurance sports, outdoor events, marathon, kayaking, running, outdoors, life-changing experience, adventure challenge, adventure experience, mountain biking, cycling, road cycling, gravel cycling">
     <meta name="author" content="Mark Todman">
     {% endblock %}
 
@@ -108,17 +108,20 @@
                     {% endif %}
                     <!-- Home icon -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="{% url 'home' %}"><div><i class="fas fa-home"></i></div></a>
+                        <a class="nav-link" href="{% url 'home' %}">
+                            <div><i class="fas fa-home"></i></div>
+                        </a>
                     </li>
                     <!-- Profile icon for authenticated Users -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}"><div><i class="fas fa-user"></i></div></a>
+                        <a class="nav-link" href="{% url 'profile' %}">
+                            <div><i class="fas fa-user"></i></div>
+                        </a>
                     </li>
                     {% endif %}
                     <li class="list-inline-item">
-                        <a class="nav-link"
-                            href="{% url 'bag' %}">
+                        <a class="nav-link" href="{% url 'bag' %}">
                             <div>
                                 {% if event_count > 0 %}
                                 <div><i class="fas fa-cart-plus shopping mb-0"></i>
@@ -157,8 +160,8 @@
 
     <!-- Footer -->
     <footer class="footer mt-5 pt-3 pb-1">
-        <p class="m-0 text-center">Follow us: <a href="https://www.facebook.com/profile.php?id=100089590943867" target="_blank" rel="noopener"
-                aria-label="visit our Facebook page (opens in a new tab)"><i
+        <p class="m-0 text-center">Follow us: <a href="https://www.facebook.com/profile.php?id=100089590943867"
+                target="_blank" rel="noopener" aria-label="visit our Facebook page (opens in a new tab)"><i
                     class="fab fa-facebook-square ms-3 text-white"></i></a>
             <a href="https://twitter.com" target="_blank" rel="noopener"
                 aria-label="visit our Twitter page (opens in a new tab)"><i

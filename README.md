@@ -41,6 +41,10 @@ To create a web application that engages users in booking onto adventure race ev
 - People who are looking for a new challenge
 - Outdoor enthusiasts looking for motivation and/or inspiration
 
+### E-commerce Business Model
+
+XXX
+
 ---
 ## SCOPE
 
@@ -200,3 +204,4 @@ Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com
 - Lucidchart: Producing Functional Structure Flowchart and Entity Relationship Diagram
 - Coolors: Color palette
 - Free Logo Services: Logo generator
+- Google Fonts: Fonts
