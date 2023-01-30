@@ -1,108 +1,202 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Endurance Republic
 
-Welcome marktodman,
+## By Mark Todman
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Launch page screenshot.](/static/img/readme/endrep-amiresponsive.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The deployed [Endurance Republic](https://endurance-republic.herokuapp.com/) app.
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The [GitHub repository.](https://github.com/marktodman/endurance-republic)
 
 ---
+## OVERVIEW
+1. [Endurance Republic Concept](#endurance-republic-concept)
+1. [Strategy](#strategy)
+1. [Scope](#scope)
+1. [Structure](#structure)
+1. [Skeleton](#skeleton)
+1. [Surface](#surface)
+1. [Planning](#planning)
+1. [Features](#features)
+1. [Resources](#resources)
+1. [Testing](#testing)
+1. [Deployment](#deployment)
+1. [Future Development Ideas](#future-development-ideas)
+1. [Credits](#credits)
 
-Happy coding!
+---
+## ENDURANCE REPUBLIC CONCEPT
+
+The concept for Endurance Republic is an adventure event company E-commerce web app. [Endurance Republic](https://endurance-republic.herokuapp.com/) is deisgned to present a showcase of events to interested potential participants. The foucs of the web app is to engage potential participants interested in adventure sports and provide them with information in order to book on to the varied events. There are range of different adventure events, including different activities and different locations around the World. They are all exciting challenges in stunning locations.
+
+---
+## STRATEGY
+
+To create a web application that engages users in booking onto adventure race events.
+
+### Target Audience:
+
+- Adventure racing enthusiasts
+- People who like organised outdoor challenges
+- People who are looking for a new challenge
+- Outdoor enthusiasts looking for motivation and/or inspiration
+
+---
+## SCOPE
+
+1. Visually appealing and intuitive user experience
+2. Scalable design that allows for the application to grow as more events are added
+3. Extensive frontend functionality for Users to support an engaging user experience and maintain account information
+4. Extensive frontend functionality for Admins to support rapid testing and deployment
+5. Responsive site design that delivers excellent user experience across platforms
+6. E-commerce functionality to allow users to make online purchases
+
+---
+## STRUCTURE
+
+### Functional Structure
+
+1. HOME PAGE: the home page contains a clear mission statement and instructions to get started with on the application. At this point the user can link straight to the content or registration. Returning users can login from the home page. Register and Login are also available from the Navbar.
+2. EVENTS PAGE: a responsive list of cards that details the events available. Each Event card has information about the description, distance, difficulty rating, location, start date, and price. The Events page can be accessed directly through the Navbar. This page is responsive and scalable and will grow as more Events are added.
+3. BAG PAGE: once a customer is logged in, they will be able to book an event. Clicking on Book My Place! will place the event in the users bag, which is accessible through the cart icon in the Navbar. The bag page allows the customer to remove the item from the bag or proceed to the Checkout.
+5. CHECKOUT PAGE: once a customer accesses the secure checkout page they are asked for billing details and emergency contact details which are saved to their profile. Credit card information is required to make the purchase. Credit card functionality is supported by Stripe. The checkout page provides customers with feedback on compliance and activity to provide a reassuring UX.
+6. CHECKOUT SUCCESS PAGE: a successful purchase takes the customer to a checkout success page. This page contains the order summary with a breakdown of the order information. There are also messages to inform the customer about site actions
+7. ADMIN PANEL PAGE: the admin panel page on the frontend is only accessible by a Superuser account. The Admin Panel page become visible in the Navbar once a Superuser is authenticated. The Admin Panel provides a summary of all Events. All Events are visible in the Admin Panel whether published or draft. All Events can be edited or deleted from the frontend Admin Panel.
+8. ADD EVENT PAGE: Superusers also have access to an Add Event page. These pages becomes visible in the Navbar once a Superuser is authenticated. This page has full capabilities to add all required information to create an Event.
+9. CONTACT PAGE: customers can use the Contact page to complete a contact enquiry. The form includes name, email and text content. The form is submitted directly to the database.
+10. LOGIN / LOGOUT PAGES: Username / Email and password is required for returning users to login. Login will be remembered, depending on browser settings. When users seek to logout (via Navbar), they are asked to confirm. This is to prevent accidental logout via the Navbar. Successful login and logout are confirmed by onscreen messaging and users are returned to the home page.
+
+
+<details>
+<summary><strong>Flowchart of Functional Structure</strong></summary>
+<br>
+
+![Endurance Republic Function Structure](/static/img/readme/endrep-flowchart.png)
+</details>
+<br>
+
+### Database Structure
+
+Six models were created to produce the required database structure. 
+
+1. ACTIVITY MODEL: A fully custom model. The Acivity Model determines on which activity each event is based. This model is in the event app. The includes a type and whether or not this is published, or draft. This allows the site administrator to create new activity groups, on which events can be based.
+2. EVENT MODEL: A fully custom model. This model is in the event app. The Event Model contains all the information for a specific Event, which is used to display events to a site user. This model has the event name, description, duration, distance, location, date, difficult, price, published status and featured image.
+3. CONTACT MODEL: A fully custom model. The Contact model is contained in the contact app and is displayed on the Contact page and consists of name, email, reason and the date on which the contact was created.
+4. ORDER MODEL: A customised model. This model contains all the information required in the checkout app. The customised additional fields are: emergency contact, emergency phone number and personal medical information. This information is required at checkout to ensure that the site owner has the safety information for each participant. The order model is related to the UserProfile.
+5. USERPROFILE MODEL: A customised model. This model contains billing information which can be used at checkout. The customised additional fields are: default emergency contact, default emergency phone number and default medical information. This information can be edited on the profile page in case user details change. This information is then accessed in the checkout page to prepopulate checkout.
+6. ORDERLINEITEM MODEL: This model is for the line items in each order. It is related to the order and event models.
+
+<details>
+<summary><strong>Entity Relationship Diagram (ERD)</strong></summary>
+<br>
+
+![Endurance Republic ERD](/static/img/readme/endrep-erd.png)
+</details>
+<br>
+---
+
+## SKELETON
+
+The skeleton of the site was designed in accordance with the scope, focusing on consistent and intuitive UX that could easily scale as the site data expanded with additional events. Wireframes for the main user and admin pages were sketched using Apple Notes. 
+
+The wireframes provided a basic outline for the site, which was modified according to development requirements during production and user feedback.
+
+<details>
+<summary><strong>Wireframes</strong></summary>
+<br>
+Home Page Wireframe:
+
+![Home Page Wireframe](/static/img/readme/endrep-home-wf.png)
+<br>
+<br>
+Events Page Wireframe:
+
+![Events Page Wireframe](/static/img/readme/endrep-events-wf.png)
+<br>
+<br>
+Contact Page Wireframe:
+
+![Contact Page Wireframe](/static/img/readme/endrep-contact-wf.png)
+<br>
+<br>
+Bag Wireframe:
+
+![Bag Page Wireframe](/static/img/readme/endrep-bag-wf.png)
+<br>
+<br>
+Checkout Page Wireframe:
+
+![Checkout Page Wireframe](/static/img/readme/endrep-checkout-wf.png)
+<br>
+<br>
+Admin Panel Page Wireframe:
+
+![Admin Panel Page Wireframe](/static/img/readme/endrep-admin-wf.png)
+<br>
+<br>
+Profile Page Wireframe:
+
+![Profile Page Wireframe](/static/img/readme/endrep-profile-wf.png)
+<br>
+<br>
+</details>
+<br>
+
+---
+## SURFACE
+
+The surface was designed to be clean and allow focus on the Event information. The event styling was based on cards which included destination images, together with descriptive information and clear actions. 
+
+Color palletes were chosen to reflect the theme of the outdoors and compliment the logo. A color pallete was chosen using [Coolors](https://coolors.co/). A dark blue background with white text and white cards was utilised to reflect the outdoors theme and to help key information stand out for the user.
+
+The logo was designed using a logo generator at [FreeLogoServices](https://www.freelogoservices.com).
+
+<details>
+<summary><strong>Endurance Republic Logo</strong></summary>
+<br>
+
+![Color palette](/static/img/er-logo.png)
+<br>
+</details>
+<br>
+<details>
+<summary><strong>Color Palette</strong></summary>
+<br>
+
+![Color palette](/static/img/readme/endrep-palette.png)
+<br>
+</details>
+<br>
+
+Event cards were chosen to be white to allow the important information to standout. This design was taken through the site with color text on a white background for all forms and tables. 
+
+Buttons were styled to standout and compliment the logo with hover actions to provide user feedback. All delete, remove or cancel buttons were styled in red as a widely accepted color to direct user caution.
+
+Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com/). Cabin Sketch was used for the Endurance Republic written logo present on every page. Raleway was used for the text for the Navbar and main site content throughout the site to satisfy the UX objectives.
+
+---
+## RESOURCES
+
+## Languages
+
+- Python
+- HTML5
+- CSS3
+- JavaScript
+
+## Frameworks & Libraries
+
+- Django: The web app is built using the Django framework
+- Bootstrap5: Frontend framework used to provide structure, style and responsive behaviour
+
+## Programs
+
+- Heroku: Container-based cloud Platform used to deploy the VoyageVert app and host the Postgres database
+- AWS: Cloud hosting platform used to host static CSS files and media images
+- Stripe: Managing secure payments
+- GitPod: Developer platform for managing code, files and version control
+- GitHub: Repository for all code. Also used to manage agile development approach
+- Apple Notes: Sketching wireframes
+- Lucidchart: Producing Functional Structure Flowchart and Entity Relationship Diagram
+- Coolors: Color palette
+- Free Logo Services: Logo generator
