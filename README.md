@@ -42,9 +42,11 @@ To create a web application that engages users in booking onto adventure race ev
 - People who are looking for a new challenge
 - Outdoor enthusiasts looking for motivation and/or inspiration
 
-### E-commerce Business Model
+### E-commerce Business Model:
 
 Endurance Republic is a business to consumer (B2C) business model. We are selling places on organised adventure events in beautiful locations. Customers pay for their place via the website and can expect to have secured their place on an organised event as per the description presented for each event. Endurance Republic is responsible for organising and running the event to fulfill the contract with the customer.
+
+The site is marketed through a Facebook business page and email marketing, through newsletter sign up. Other social channels will also be built into the marketing strategy. SEO is implemented through keyword metadata to allow users to discover the site through organic search.
 
 ---
 ## SCOPE
@@ -98,6 +100,7 @@ Six models were created to produce the required database structure.
 ![Endurance Republic ERD](/static/img/readme/endrep-erd.png)
 </details>
 <br>
+
 ---
 
 ## SKELETON
@@ -193,17 +196,17 @@ Guest Navbar. Register and Login navigation is available:
 
 ![Guest Navbar](/static/img/readme/endrep-guestnavbar.png)
 <br>
-<br>
+
 Authorised User Navbar. Register and Login not present and Profile icon appears:
 
 ![Signed In Navbar](/static/img/readme/endrep-authusernav.png)
 <br>
-<br>
+
 Authorised User Navbar with item in cart. Cart changes to include a '+' and number of items in cart appears:
 
 ![Cart Navbar](/static/img/readme/endrep-authusercartnav.png)
 <br>
-<br>
+
 SuperUser Navbar. Admin dropdown in Navbar. Dropdown shows Admin Panel and Add Event links:
 
 ![Admin Navbar](/static/img/readme/endrep-superusernav.png)
@@ -219,7 +222,7 @@ SuperUser Navbar. Admin dropdown in Navbar. Dropdown shows Admin Panel and Add E
 In addition to the navbar, the home page contents also change depending on when a user (either authenticated or superuser) is signed in. 
 
 <details>
-<summary><strong>Home Pag Features</strong></summary>
+<summary><strong>Home Page Features</strong></summary>
 <br>
 
 A guest user has links to Login and Register on the home page as well as the navbar:
@@ -421,6 +424,21 @@ The contact information is added to the database and visible on the backend.
 </details>
 <br>
 
+## Custom 404 Page
+
+There is a customer 404 page to ensure that users looking for unavailable content are redirected back to relevant content on the site.
+
+<details>
+<summary><strong>Custom 404 Page</strong></summary>
+<br>
+
+![Custom 404 page](/static/img/readme/endrep-404.png)
+<br>
+
+</details>
+<br>
+
+
 ---
 
 ## MARKETING and SEO
@@ -441,6 +459,8 @@ The Facebook page supports audience engagement and attracts new potential custom
 <br>
 <br>
 
+The newsletter submission is recorded in Mailchimp:
+
 ![Newsletter Sign Up](/static/img/readme/endrep-mailchimp.png)
 <br>
 </details>
@@ -452,7 +472,7 @@ The Facebook page supports audience engagement and attracts new potential custom
 
 ![Facebook Summary](/static/img/readme/endrep-facebook.png)
 <br>
-br>
+<br>
 
 ![Facebook Header](/static/img/readme/endrep-facebook1.png)
 <br>
@@ -464,6 +484,7 @@ br>
 <br>
 
 ---
+
 ## RESOURCES
 
 ## Languages
@@ -478,6 +499,16 @@ br>
 - Django: The web app is built using the Django framework
 - Bootstrap5: Frontend framework used to provide structure, style and responsive behaviour
 
+<details>
+<summary><strong>Python Libraries</strong></summary>
+<br>
+
+![Python libraries](/static/img/readme/endrep-requirements.png)
+
+<br>
+</details>
+<br>
+
 ## Programs
 
 - Heroku: Container-based cloud Platform used to deploy the VoyageVert app and host the Postgres database
@@ -491,3 +522,40 @@ br>
 - Free Logo Services: Logo generator
 - Google Fonts: Fonts
 - Mailchimp: Audience marketing software. Specifically supports the newsletter sign up.
+
+---
+
+## TESTING
+
+## Validation Testing
+
+## Lighthouse Report
+
+Lighthouse report results are available for all guest accessible pages.
+
+<details>
+<summary><strong>Lighthouse Report Results</strong></summary>
+<br>
+
+Home page:
+
+![Lighthouse Report](/static/img/readme/endrep-lighthouse1.png)
+<br>
+Events page:
+
+![Lighthouse Report](/static/img/readme/endrep-lighthouse2.png)
+<br>
+Contact page:
+
+![Lighthouse Report](/static/img/readme/endrep-lighthouse3.png)
+<br>
+Register page:
+
+![Lighthouse Report](/static/img/readme/endrep-lighthouse4.png)
+<br>
+Sign in page:
+
+![Lighthouse Report](/static/img/readme/endrep-lighthouse3.png)
+<br>
+</details>
+<br>
