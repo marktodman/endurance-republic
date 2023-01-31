@@ -18,6 +18,7 @@ The [GitHub repository.](https://github.com/marktodman/endurance-republic)
 1. [Surface](#surface)
 1. [Planning](#planning)
 1. [Features](#features)
+1. [Marketing & SEO](#marketing-and-seo)
 1. [Resources](#resources)
 1. [Testing](#testing)
 1. [Deployment](#deployment)
@@ -43,7 +44,7 @@ To create a web application that engages users in booking onto adventure race ev
 
 ### E-commerce Business Model
 
-XXX
+Endurance Republic is a business to consumer (B2C) business model. We are selling places on organised adventure events in beautiful locations. Customers pay for their place via the website and can expect to have secured their place on an organised event as per the description presented for each event. Endurance Republic is responsible for organising and running the event to fulfill the contract with the customer.
 
 ---
 ## SCOPE
@@ -179,6 +180,48 @@ Buttons were styled to standout and compliment the logo with hover actions to pr
 Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com/). Cabin Sketch was used for the Endurance Republic written logo present on every page. Raleway was used for the text for the Navbar and main site content throughout the site to satisfy the UX objectives.
 
 ---
+
+## MARKETING and SEO
+
+Marketing and SEO are critical components of the B2C E-commerce business model for Endurance Republic. Key features have been incorporated to support marketing activities, including a newsletter subscription and a Facebook business page. 
+
+The newsletter audience will enable the the site owner to engage with their customers and potential customers through permission to send them marketing newsletters. The newsletter sign up is linked to Mailchimp which enables the business owner to effectively manage marketing campaigns with their audience.
+
+The Facebook page supports audience engagement and attracts new potential customers to the site. There are social links on the site which open a link to the social sites in a new tab. The Facebook link is directed to the Endurance Republic Facebook page.
+
+![Social Links](/static/img/readme/endrep-social.png)
+
+<details>
+<summary><strong>Newsletter Subscription</strong></summary>
+<br>
+
+![Newsletter Sign Up](/static/img/readme/endrep-newsletter.png)
+<br>
+<br>
+
+![Newsletter Sign Up](/static/img/readme/endrep-mailchimp.png)
+<br>
+</details>
+<br>
+
+<details>
+<summary><strong>Facebook Business Page</strong></summary>
+<br>
+
+![Facebook Summary](/static/img/readme/endrep-facebook.png)
+<br>
+br>
+
+![Facebook Header](/static/img/readme/endrep-facebook1.png)
+<br>
+br>
+
+![Facebook Post](/static/img/readme/endrep-facebook2.png)
+<br>
+</details>
+<br>
+
+---
 ## RESOURCES
 
 ## Languages
@@ -205,3 +248,4 @@ Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com
 - Coolors: Color palette
 - Free Logo Services: Logo generator
 - Google Fonts: Fonts
+- Mailchimp: Audience marketing software. Specifically supports the newsletter sign up.
