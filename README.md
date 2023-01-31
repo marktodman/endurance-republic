@@ -160,7 +160,7 @@ The logo was designed using a logo generator at [FreeLogoServices](https://www.f
 <summary><strong>Endurance Republic Logo</strong></summary>
 <br>
 
-![Color palette](/static/img/er-logo.png)
+![Endurance Republic Logo](/static/img/er-logo.png)
 <br>
 </details>
 <br>
@@ -178,6 +178,248 @@ Event cards were chosen to be white to allow the important information to stando
 Buttons were styled to standout and compliment the logo with hover actions to provide user feedback. All delete, remove or cancel buttons were styled in red as a widely accepted color to direct user caution.
 
 Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com/). Cabin Sketch was used for the Endurance Republic written logo present on every page. Raleway was used for the text for the Navbar and main site content throughout the site to satisfy the UX objectives.
+
+---
+## FEATURES
+
+## Navbar
+
+The navbar is a responsive element, which collapses to a hamburger icon on medium and small screens. The navbar is persistent on all pages. The contents of the navbar change depending on whether the user is 1) a guest 2) an authenticated user 3) a superuser 4) whether there are items in the cart.
+
+<details>
+<summary><strong>Navbar Features</strong></summary>
+<br>
+Guest Navbar. Register and Login navigation is available:
+
+![Guest Navbar](/static/img/readme/endrep-guestnavbar.png)
+<br>
+<br>
+Authorised User Navbar. Register and Login not present and Profile icon appears:
+
+![Signed In Navbar](/static/img/readme/endrep-authusernav.png)
+<br>
+<br>
+Authorised User Navbar with item in cart. Cart changes to include a '+' and number of items in cart appears:
+
+![Cart Navbar](/static/img/readme/endrep-authusercartnav.png)
+<br>
+<br>
+SuperUser Navbar. Admin dropdown in Navbar. Dropdown shows Admin Panel and Add Event links:
+
+![Admin Navbar](/static/img/readme/endrep-superusernav.png)
+<br>
+
+![Admin Navbar](/static/img/readme/endrep-superusernav1.png)
+<br>
+</details>
+<br>
+
+## Home Page
+
+In addition to the navbar, the home page contents also change depending on when a user (either authenticated or superuser) is signed in. 
+
+<details>
+<summary><strong>Home Pag Features</strong></summary>
+<br>
+
+A guest user has links to Login and Register on the home page as well as the navbar:
+
+![Guest Homepage](/static/img/readme/endrep-guesthome.png)
+
+An authenticated user will not have the Login or Register links on the home page:
+
+![Authenticated Homepage](/static/img/readme/endrep-signedinhome.png)
+<br>
+</details>
+<br>
+
+## Events Page
+
+The Events pages provides all available events. The page is responsive and scalable. On larger screens there are three event cards across the page. On medium size screens this reduces to two and on smaller screens, like mobiles, this reduces to one. As new events are added and published these will be added as Event Cards to the existing screen. Currently there is no limit to the number that would be displayed and there is no pagination. Pagination would have to be considered if the UX becomes impacted by the inclusion of too many events.
+
+Each Event is presented on an Event Card which includes the details of each event, including the price and a button to Book a place which places the event in the customers cart. Only authenticated users can add an event to the cart.
+
+<details>
+<summary><strong>Events Page Features</strong></summary>
+<br>
+
+The Event page:
+
+![Event Page](/static/img/readme/endrep-eventpage.png)
+<br>
+
+![Event Page](/static/img/readme/endrep-eventpage1.png)
+
+If a guest user tries to book an event they will get redirected to the sign in page with a helpful message:
+
+![Events redirect](/static/img/readme/endrep-eventmsg.png)
+<br>
+</details>
+<br>
+
+## Shopping Cart Page
+
+Once an authenticated user clicks to book a place on an Event, it is added to their shopping cart. The shopping cart page can be accessed through the cart nav element, which changes to yellow, changes design to include a '+' and lists the number of items in the cart in the navbar (see navbar section above for image).
+
+The shopping cart page provides a summary of the items in the cart. It also provides the option to remove the item from the cart, to 'keep shopping' or to proceed to 'secure checkout'.
+
+A user cannot add more than one of the same event to the cart as this would create issues for multi-person registration, which is beyond the scope of this project (see Future Developments section below). If a user tries to add more than one of the same event, they will receive a message in the browser with instructions (see image below).
+
+<details>
+<summary><strong>Shopping Cart Page Features</strong></summary>
+<br>
+
+![Shopping Cart Page](/static/img/readme/endrep-cart.png)
+<br>
+
+Message if user tries to put more than one of the same event in their cart:
+
+![Events redirect](/static/img/readme/endrep-cartmsg.png)
+<br>
+</details>
+<br>
+
+## Checkout Page
+
+The checkout page consists of a form for the user to submit their personal details, emergency contact details, billing details and payment details. Emergency contact details are included as they are critical for those participating in adventure events. The checkout page also includes an order summary. There is form validation, so all required fields must be complete before submission. There is validation on the payment information, so only valid card payments will be processed.
+
+<details>
+<summary><strong>Checkout Page Features</strong></summary>
+<br>
+The checkout page requires completion of personal details, including emergency contact and medical information. This additional information is collected at checkout and displayed on the user profile. The checkout page also provides an order summary:
+
+![Checkout Page](/static/img/readme/endrep-checkout.png)
+<br>
+
+The checkout page also includes form information for billing and payment details:
+
+![Checkout Page](/static/img/readme/endrep-checkout1.png)
+<br>
+
+Form validation message if user tries to complete checkout without providing required fields:
+
+![Checkout form validation](/static/img/readme/endrep-form.png)
+<br>
+
+Card form validation message if user tries to complete checkout without valid credit card information:
+
+![Card validation](/static/img/readme/endrep-card.png)
+<br>
+
+</details>
+<br>
+
+## Checkout Success Page
+
+Following successful submission of required fields and valid credit card information, the user is shown a checkout success page.
+
+<details>
+<summary><strong>Checkout Success Page Features</strong></summary>
+<br>
+
+The checkout success page shows the order summary details, including a unique order number:
+
+![Checkout success summary](/static/img/readme/endrep-checkoutsuccess.png)
+<br>
+
+Checkout success message to the customer:
+
+![Events redirect](/static/img/readme/endrep-checkoutsuccessmsg.png)
+<br>
+</details>
+<br>
+
+## Profile Page
+
+When users register for the site, a profile is automatically created and the profile icon appears in the navbar. Authenticated users have access to profile page, through which they can manage all of their personal information including full name, email, emergency contact information, medical information, and billing details. This information is stored in the database and automatically retrieved to pre-populate the checkout page. If details are changed (or added0 during checkout this information is also automatically updated in the profile. The profile page also displays any orders, together with a link to the checkout success page containing the detail of each order.
+
+<details>
+<summary><strong>Profile Page Features</strong></summary>
+<br>
+
+The Profile page allows a user to update their information and provides and order summary:
+
+![Profile page](/static/img/readme/endrep-profile.png)
+<br>
+</details>
+<br>
+
+## Admin Panel and Add Event
+
+Authenticated superusers have access to an Admin Panel which provides full CRUD functionality for Events through the frontend. 
+
+All Events are summarised in the Admin Panel page by Event Name, Description, Duration, Distance, Location, Start Date, Price and Status. All Events are shown whether draft (not displayed on the Events page) or published (displayed on the Events page). From the admin panel, Events can be edited or deleted. Events are added to the database through the Add Event page.
+
+<details>
+<summary><strong>Admin Panel Features</strong></summary>
+<br>
+
+The Admin panel page summaries Event data for the admin and provides edit and delete functionality:
+
+![Admin Panel page](/static/img/readme/endrep-admin.png)
+<br>
+
+The edit Event page pulls the event data from the database and allows for full changes. All changes are saved to the database:
+
+![Edit event page](/static/img/readme/endrep-editevent.png)
+<br>
+
+![Edit event page](/static/img/readme/endrep-editevent1.png)
+<br>
+
+Admins are warned that deletion cannot be undone. They have to click to continue.
+
+![Delete event warning page](/static/img/readme/endrep-delete.png)
+<br>
+
+Admins receive notification that the deletion has been successful.
+
+![Delete notify page](/static/img/readme/endrep-deletenotify.png)
+<br>
+
+Admins can add Events to the database. This form includes all database fields.
+
+![Add Event page](/static/img/readme/endrep-addevent.png)
+<br>
+
+![Add Event page](/static/img/readme/endrep-addevent1.png)
+<br>
+
+Admins get confirmation of add events and choice of follow on actions.
+
+![Add Event page](/static/img/readme/endrep-addeventconf.png)
+<br>
+
+</details>
+<br>
+
+## Contact Us
+
+All users can access the Contact Us page to submit a request to the company. Users are asked to supply name, email and a reason for contact. The submit button posts the data to the admin area in the backend.
+
+<details>
+<summary><strong>Contact Page Features</strong></summary>
+<br>
+
+The Contact Us form:
+
+![Contact page](/static/img/readme/endrep-contact.png)
+<br>
+
+![Contact page](/static/img/readme/endrep-contacttest.png)
+<br>
+
+The user receives notification of submission and options for follow on actions.
+
+![Contact page](/static/img/readme/endrep-contactsub.png)
+<br>
+
+The contact information is added to the database and visible on the backend.
+
+![Contact database](/static/img/readme/endrep-contactdata.png)
+<br>
+</details>
+<br>
 
 ---
 
