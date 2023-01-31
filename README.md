@@ -476,7 +476,6 @@ The newsletter submission is recorded in Mailchimp:
 
 ![Facebook Header](/static/img/readme/endrep-facebook1.png)
 <br>
-br>
 
 ![Facebook Post](/static/img/readme/endrep-facebook2.png)
 <br>
