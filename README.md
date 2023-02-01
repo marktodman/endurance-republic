@@ -511,6 +511,7 @@ The newsletter submission is recorded in Mailchimp:
 ## Programs
 
 - Heroku: Container-based cloud Platform used to deploy the VoyageVert app and host the Postgres database
+- ElephantSQL: Host for the deployed production database
 - AWS: Cloud hosting platform used to host static CSS files and media images
 - Stripe: Managing secure payments
 - GitPod: Developer platform for managing code, files and version control
@@ -520,7 +521,8 @@ The newsletter submission is recorded in Mailchimp:
 - Coolors: Color palette
 - Free Logo Services: Logo generator
 - Google Fonts: Fonts
-- Mailchimp: Audience marketing software. Specifically supports the newsletter sign up.
+- Mailchimp: Audience marketing software. Specifically supports the newsletter sign up
+- Pexels: images for this project were sourced free of charge
 
 ---
 
@@ -632,3 +634,13 @@ All JavaScript was passed through [JSHint](https://jshint.com/) to check for err
 <br>
 </details>
 <br>
+
+## Manual Testing
+
+Manual testing of all site functionality was undertaken throughout production and following deployment of the production site.
+
+All results of manual testing (45 test cases) are recorded in this [Google Sheet](https://docs.google.com/spreadsheets/d/14tIKAgv5rKZdjcnPGnsoGoLWkCGqxY6eJ_GAbqWo2Yc/edit?usp=sharing).
+
+---
+
+##
