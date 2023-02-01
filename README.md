@@ -438,6 +438,19 @@ There is a customer 404 page to ensure that users looking for unavailable conten
 </details>
 <br>
 
+## Email Confirmations
+
+Successful orders receive email confirmation sent to the supplied email. Email verification requests are also sent following sign up.
+
+<details>
+<summary><strong>Successful order email example</strong></summary>
+<br>
+
+![Checkout success email](/static/img/readme/endrep-successemail.png)
+<br>
+
+</details>
+<br>
 
 ---
 
