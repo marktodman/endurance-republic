@@ -88,7 +88,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('events'))
 
     current_bag = bag_contents(request)
@@ -100,7 +101,7 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    # Attempt to prefill the form with any info the user maintains in their profile
+    # Attempt to prefill the form with any existing profile info
     if request.user.is_authenticated:
         try:
             profile = UserProfile.objects.get(user=request.user)

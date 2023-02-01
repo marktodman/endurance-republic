@@ -602,3 +602,33 @@ The custom CSS file located in the route static folder was tested using the [W3 
 <br>
 </details>
 <br>
+
+## Code Linting
+
+Flake8 was used to check for code errors and to improve code readability. Flake8 was run from the gitpod terminal using the command python3 -m flake. In additon, certain files were excluded from the final assessment to improve the readability of the report. Excluded finals include directory file not altered during the project, migration files and environment files. All remaining warnings are considered acceptable to code readability and do not represent bugs.
+
+<details>
+<summary><strong>Flake8 Report Results</strong></summary>
+<br>
+
+![Flake8 report](/static/img/readme/endrep-flake.png)
+<br>
+</details>
+<br>
+
+## JavaScript
+
+All JavaScript was passed through [JSHint](https://jshint.com/) to check for errors. All code passed with no errors.
+
+<details>
+<summary><strong>JSHint Report Results</strong></summary>
+<br>
+
+![JSHint report](/static/img/readme/endrep-js1.png)
+<br>
+
+
+![JSHint report](/static/img/readme/endrep-js2.png)
+<br>
+</details>
+<br>
