@@ -643,4 +643,132 @@ All results of manual testing (45 test cases) are recorded in this [Google Sheet
 
 ---
 
-##
+## DEPLOYMENT
+
+The Endurance Republic web app is deployed via [GitHub](https://github.com/) and [Heroku](https://www.heroku.com/).
+
+The deployed Endurance Republi web app: [Endurance Republic](https://endurance-republic.herokuapp.com/)
+
+There are several elements to successful deployment:
+
+1. The code base needs to be in a repository: GitHub
+1. A database is required to host the data: ElephantSQL
+1. Images and media need to be hosted: Amazon Web Services (AWS)
+1. Payments need to be processed: Stripe
+1. Sending emails: Gmail
+1. The web app needs to be hosted and manage integration of the above services: Heroku
+
+## GitHub Repository
+
+The code is located in a [GitHub repository](https://github.com/marktodman/endurance-republic).
+
+### Forking the GitHub Repository
+
+To use this code and make changes without affecting the original code, it is possible to 'fork' the code on the GitHub repository through the following steps:
+
+1. Create an account at [GitHub](https://github.com/).
+1. Log into your GitHub account.
+1. Go to the GitHub repository for [Endurance Republic](https://github.com/marktodman/endurance-republic).
+1. Click the 'Fork' button in the upper right-hand corner of the page.
+1. A copy of the repository will be available in your own repository.
+
+## Heroku Deployment 
+
+The site is deployed to [Heroku](https://www.heroku.com) through the following steps:
+
+1. Log in to Heroku or create an account if required.
+1. On the Welcome page click the button labelled 'New' in the top right corner, just below the header.
+1. From the drop-down menu select 'Create new app'.
+1. Enter a unique app name. 
+1. Select the relevant geographical region.
+1. Click to 'Create App'.
+1. Navigate to 'Settings' and scroll down to the 'Config Vars' section. 
+1. In stages (see below) you will need to add the Config Vars for:
+    * ElephantSQL: Key: DATABASE_URL Value: your ElephantSQL instance URL
+    * AWS: Key: AWS_ACCESS_KEY_ID Value: your AWS access key ID
+    * AWS: Key: AWS_SECRET_ACCESS_KEY Value: your AWS secret
+    * AWS: Key USE_AWS Value: True
+    * Django Secret Key: Key: SECRET_KEY Value: your secret key
+    * Stripe: Key: STRIPE_PUBLIC_KEY Value: your stripe public key
+    * Stripe: Key: STRIPE_SECRET_KEY Value: your stripe secret key
+    * Stripe: Key: STRIPE_WH_SECRET Value: your stripe webhook secret
+    * Gmail: Key: EMAIL_HOST_USER Value: your email address
+    * Gmail: Key: EMAIL_HOST_PASS Value: your app password
+1. Click on the 'Deploy' tab.
+1. Next to 'Deployment method' select 'GitHub'.
+1. Connect the relevant GitHub repository.
+1. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. 
+1. Under 'Automatic deploys' you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+
+## ElephantSQL
+
+1. Create an account at [ElephantSQL](https://customer.elephantsql.com/login) or use GitHub to login
+1. Create a new instance
+1. Create a name (suggest your project name)
+1. Select a plan (suggest Tiny Turtule free plan)
+1. Select region for hosting near to you
+1. Create instance
+1. Copy the database URL - this will be required for Heroku Config Vars and to migrate the development database
+
+### Migrate from development database to ElephantSQL
+
+1. In the terminal: pip3 install dj_database_url==0.5.0 psycopg2
+1. Freeze requirements.txt
+1. In settings.py import os and import dj_database_url
+1. Set the default database to dj_database_url.parse('your-database-url-here') - do not commit with this in your settings.py!
+1. Migrate changes in the terminal
+1. Create SuperUser for the new database via the terminal whilst connected to the ElphantSQL database
+1. Confirm migrations in ElephantSQL by executing a table query in the browser tab of the instance
+1. Important! Change settings.py for the development database to 'DATABASE_URL' before commiting any changes
+
+### Connecting ElephantSQL database to Heroku
+
+1. Go to settings and click on 'Config Vars'
+1. Add 'DATABASE_URL' to the Key
+1. Add your ElephantSQL instance url to the Value
+1. Click 'Add'
+
+## Amazon WebServices
+
+1. Create an account at aws.amazon.com
+1. Open the S3 application and create an S3 bucket
+1. Select AWS Region.
+1. Uncheck the "Block All Public access setting" & acknowledge that the bucket will be public, it will need to be public in order to allow public access to static files.
+1. In the Properties section, navigate to the "Static Website Hosting" section and click edit
+1. Under the Properties section, turn on "Static Website Hosting", and set the index.html and the error.html values.
+1. In the Permissions section, click edit on the CORS configuration and set the following configuration: ![Preview](/static/img/readme/cors.png)
+1. Click to edit the bucket policy and set to S3 Bucket Policy and generate the policy
+1. Go to the Access Control List and set the List objects permission for everyone under the Public Access section.
+1. Open the IAM application to control access to the bucket and set up a user group
+1. Click on Policies, and Create Policy.
+1. Click on the JSON tab and import a pre-built Amazon policy called AmazonS3FullAccess:
+1. Set the following settings in the JSON tab:
+* Click Review Policy, give it a name and description and click Create Policy.
+* To attach the policy to the group, navigate to Groups, then Permissions, and under Add Permissions, select Attach Policy.
+* To create a user for the group, click Add User
+* Add the user to the group created, making sure to download the CSV file which contains the user's access credentials.
+* Note the following AWS code in settings.py. An environment variable called USE_AWS must be set to use these settings, otherwise it will use local storage:
+
+## Connecting Gmail
+
+Gmail is a simple solution to send real emails from the web app. This is how to set up Gmail to send emails.
+
+1. Create a Gmail account at google.com, login, go to accounts settings and click on Other Google Account Settings
+1. Go to accounts and import then click on Other account settings
+1. Turn on 2-step verification and follow the steps to enable
+1. Click on app passwords, select Other as the app and give the password a name, for example Django or your app name
+1. Click create and a 16 digit password will be generated, copy this 16 digit password
+1. Add the following to settings.py:
+![Preview](/static/img/readme/endrep-gmail.png)
+1. Set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in the deployment host (Heroku)
+
+## Stripe
+
+1. Register for a [stripe account](https://stripe.com/)
+1. Create an Account for your project
+1. Go to the Developers section
+1. Go to API keys section to access publishable and secret keys for use in settings.py and Heroku deployment
+1. In the Developers section of your stripe account click on Webhooks
+1. Create a webhook endpoint with the url of your website: url/checkout/wh/
+1. Setup webhook handler and webhooks files in the checkout app
+1. Ensure your STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY and STRIPE_WH_SECRET are all set in settings.py and production deployment host (Heroku)
