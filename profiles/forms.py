@@ -26,7 +26,7 @@ class UserProfileForm(forms.ModelForm):
             'default_country': 'Country',
             'default_emergency_contact': 'Emergency Contact',
             'default_emergency_number': 'Emergency Contact Phone Number',
-            'default_medical': 'Medical Information - confirm None or add details',
+            'default_medical': 'Medical Info - confirm None or add details',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True

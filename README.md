@@ -558,3 +558,47 @@ Sign in page:
 <br>
 </details>
 <br>
+
+## HTML Validation
+
+The W3C HTML validator results are available for all guest accessible pages.
+
+<details>
+<summary><strong>HTML Validation Report Results</strong></summary>
+<br>
+
+Home page:
+
+![W3C Report](/static/img/readme/endrep-html1.png)
+<br>
+Events page:
+
+![W3C Report](/static/img/readme/endrep-html2.png)
+<br>
+Contact page:
+
+![W3C Report](/static/img/readme/endrep-html3.png)
+<br>
+Register page:
+
+![W3C Report](/static/img/readme/endrep-html4.png)
+<br>
+Sign in page:
+
+![W3C Report](/static/img/readme/endrep-html5.png)
+<br>
+</details>
+<br>
+
+## CSS Validation
+
+The custom CSS file located in the route static folder was tested using the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/) via direct code input and no errors were found:
+
+<details>
+<summary><strong>CSS Validation Report Results</strong></summary>
+<br>
+
+![W3C CSS Validation](/static/img/readme/endrep-css.png)
+<br>
+</details>
+<br>

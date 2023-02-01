@@ -12,16 +12,24 @@ class UserProfile(models.Model):
     address information, order history and emergency contact info
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
-    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
-    default_county = models.CharField(max_length=80, null=True, blank=True)
-    default_postcode = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_street_address1 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(
+        max_length=40, null=True, blank=True)
+    default_county = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_postcode = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_country = CountryField(
+        blank_label='Country', null=True, blank=True)
     default_emergency_contact = models.CharField(
         max_length=50, null=True, blank=True)
-    default_emergency_number = models.CharField(max_length=20, null=True, blank=True)
+    default_emergency_number = models.CharField(
+        max_length=20, null=True, blank=True)
     default_medical = models.TextField(null=True, blank=True)
 
     def __str__(self):

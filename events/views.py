@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from .models import Activity, Event
+from .models import Event
 from django.views.generic import ListView
 from .forms import EventForm
 from django.contrib import messages
