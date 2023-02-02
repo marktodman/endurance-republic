@@ -620,7 +620,7 @@ The custom CSS file located in the route static folder was tested using the [W3 
 
 ## Code Linting
 
-Flake8 was used to check for code errors and to improve code readability. Flake8 was run from the gitpod terminal using the command python3 -m flake. In additon, certain files were excluded from the final assessment to improve the readability of the report. Excluded finals include directory file not altered during the project, migration files and environment files. All remaining warnings are considered acceptable to code readability and do not represent bugs.
+Flake8 was used to check for code errors and to improve code readability. Flake8 was run from the gitpod terminal using the command python3 -m flake. In additon, certain files were excluded from the final assessment to improve the readability of the report. Excluded finals include directory files not altered during the project, migration files and environment files. All remaining warnings are considered acceptable to code readability and do not represent bugs.
 
 <details>
 <summary><strong>Flake8 Report Results</strong></summary>
@@ -648,11 +648,31 @@ All JavaScript was passed through [JSHint](https://jshint.com/) to check for err
 </details>
 <br>
 
+
 ## Manual Testing
 
 Manual testing of all site functionality was undertaken throughout production and following deployment of the production site.
 
-All results of manual testing (45 test cases) are recorded in this [Google Sheet](https://docs.google.com/spreadsheets/d/14tIKAgv5rKZdjcnPGnsoGoLWkCGqxY6eJ_GAbqWo2Yc/edit?usp=sharing).
+All results of manual testing (48 test cases) are recorded in this [Google Sheet](https://docs.google.com/spreadsheets/d/14tIKAgv5rKZdjcnPGnsoGoLWkCGqxY6eJ_GAbqWo2Yc/edit?usp=sharing).
+
+### Stripe
+
+The Stripe card testing documentation can be found [here](https://stripe.com/docs/testing).
+
+Dummy card information was used for all manual testing. All widely accepted cards from many global locations can be tested on the site.
+
+Manual site testing was mostly undertaken using the dummy Visa Credit Card details:
+
+![Stripe dummy card](/static/img/readme/endrep-stripedets.png)
+
+<details>
+<summary><strong>Example Stripe Webhook Results</strong></summary>
+<br>
+
+![Stripe Webhook Results](/static/img/readme/endrep-webhooks.png)
+<br>
+</details>
+<br>
 
 ---
 
