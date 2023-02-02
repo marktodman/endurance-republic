@@ -183,6 +183,39 @@ Buttons were styled to standout and compliment the logo with hover actions to pr
 Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com/). Cabin Sketch was used for the Endurance Republic written logo present on every page. Raleway was used for the text for the Navbar and main site content throughout the site to satisfy the UX objectives.
 
 ---
+
+## PLANNING
+
+## Agile Development Practices
+
+Agile development practices were used to manage delivery throughout this project. The processes and tools are detailed below.
+
+### Features
+
+Initially, Features were determined to deliver the project goals defined by the Scope (above):
+
+#### Features:
+
+1. Accessing Event information and Navigating the Site
+
+2. Frontend Administration to speed up changes, testing and deployment
+
+3. Booking Events through a secure checkout
+
+4. Profiles and management of account information
+
+5. Customer engagement, marketing and SEO
+
+### User Stories
+
+User Stories were created to define the incremental elements required to deliver each Feature. The User Stories were then prioritised through the Product Backlog and tasks were identified to deliver each User Story.
+
+The mapping of the User Stories to each Features was completed on this [Google Sheet](https://docs.google.com/spreadsheets/d/1lci3SKE9jDQtD43J5pXzI07rO_IVGJonrqBMwjrL_qk/edit?usp=share_link)
+
+[GitHub Issues](https://github.com/marktodman/endurance-republic/issues) was used to record the User Stories. User Stories then prioritised for completion. The completion of the User Stories was managed through a [Kanban Board in a GitHuB Project](https://github.com/users/marktodman/projects/4). Based on prioritisation, each User Story was moved through the stages of Todo >> In Progress >> Done. Only one User Story (Automated Testing) currently remains in Todo and all tasks relating to the other User Stories are complete.
+
+---
+
 ## FEATURES
 
 ## Navbar
