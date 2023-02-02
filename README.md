@@ -102,7 +102,6 @@ Six models were created to produce the required database structure.
 <br>
 
 ---
-
 ## SKELETON
 
 The skeleton of the site was designed in accordance with the scope, focusing on consistent and intuitive UX that could easily scale as the site data expanded with additional events. Wireframes for the main user and admin pages were sketched using Apple Notes. 
@@ -183,7 +182,6 @@ Buttons were styled to standout and compliment the logo with hover actions to pr
 Two fonts were chosen for the site using [Google Fonts](https://fonts.google.com/). Cabin Sketch was used for the Endurance Republic written logo present on every page. Raleway was used for the text for the Navbar and main site content throughout the site to satisfy the UX objectives.
 
 ---
-
 ## PLANNING
 
 ## Agile Development Practices
@@ -215,7 +213,6 @@ The mapping of the User Stories to each Features was completed on this [Google S
 [GitHub Issues](https://github.com/marktodman/endurance-republic/issues) was used to record the User Stories. User Stories then prioritised for completion. The completion of the User Stories was managed through a [Kanban Board in a GitHuB Project](https://github.com/users/marktodman/projects/4). Based on prioritisation, each User Story was moved through the stages of Todo >> In Progress >> Done. Only one User Story (Automated Testing) currently remains in Todo and all tasks relating to the other User Stories are complete.
 
 ---
-
 ## FEATURES
 
 ## Navbar
@@ -486,7 +483,6 @@ Successful orders receive email confirmation sent to the supplied email. Email v
 <br>
 
 ---
-
 ## MARKETING and SEO
 
 Marketing and SEO are critical components of the B2C E-commerce business model for Endurance Republic. Key features have been incorporated to support marketing activities, including a newsletter subscription and a Facebook business page. 
@@ -529,7 +525,6 @@ The newsletter submission is recorded in Mailchimp:
 <br>
 
 ---
-
 ## RESOURCES
 
 ## Languages
@@ -571,7 +566,6 @@ The newsletter submission is recorded in Mailchimp:
 - Pexels: images for this project were sourced free of charge
 
 ---
-
 ## TESTING
 
 ## Validation Testing
@@ -708,12 +702,11 @@ Manual site testing was mostly undertaken using the dummy Visa Credit Card detai
 <br>
 
 ---
-
 ## DEPLOYMENT
 
 The Endurance Republic web app is deployed via [GitHub](https://github.com/) and [Heroku](https://www.heroku.com/).
 
-The deployed Endurance Republi web app: [Endurance Republic](https://endurance-republic.herokuapp.com/)
+The deployed Endurance Republic web app: [Endurance Republic](https://endurance-republic.herokuapp.com/)
 
 There are several elements to successful deployment:
 
@@ -838,3 +831,27 @@ Gmail is a simple solution to send real emails from the web app. This is how to 
 1. Create a webhook endpoint with the url of your website: url/checkout/wh/
 1. Setup webhook handler and webhooks files in the checkout app
 1. Ensure your STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY and STRIPE_WH_SECRET are all set in settings.py and production deployment host (Heroku)
+
+---
+## FUTURE DEVELOPMENT IDEAS
+
+There are a number of future development ideas to be deployed under future versions of the app:
+
+1. Add an About Us page to provide more information about the people and company behind Endurance Republic to build customer confidence
+1. Create checkout for more than one person on each event
+1. Add terms & conditions and privacy statements regarding the purchase and the use of customer data
+1. Create individual pages for each event so more information can be shared
+1. Add videos about the Events so that customers can find out more before they book
+1. Add a reviews section so that customers can leave and read reviews
+1. Add a Blog to generate site engagement and grow site traffic
+
+---
+## CREDITS
+
+The useful [Django documentation](https://docs.djangoproject.com/en/4.1/) was invaluable in the creation of this project.
+
+Images were all open source and free to use from [Pexels](https://www.pexels.com). 
+
+Some code from the [Code Institute Boutique Ado Project](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546) was instrumental in pulling together this web app. All use of code is referenced in the relevant files.
+
+Martina Terlevic at the [Code Institute](https://codeinstitute.net/) provided excellent direction and helped with resources to steer this project to completion. 
