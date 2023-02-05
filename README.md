@@ -208,7 +208,7 @@ Initially, Features were determined to deliver the project goals defined by the 
 
 User Stories were created to define the incremental elements required to deliver each Feature. The User Stories were then prioritised through the Product Backlog and tasks were identified to deliver each User Story.
 
-The mapping of the User Stories to each Features was completed on this [Google Sheet](https://docs.google.com/spreadsheets/d/1lci3SKE9jDQtD43J5pXzI07rO_IVGJonrqBMwjrL_qk/edit?usp=share_link)
+The mapping of the User Stories to each Features was completed on this [Google Sheet](https://docs.google.com/spreadsheets/d/1lci3SKE9jDQtD43J5pXzI07rO_IVGJonrqBMwjrL_qk/edit?usp=share_link).
 
 [GitHub Issues](https://github.com/marktodman/endurance-republic/issues) was used to record the User Stories. User Stories then prioritised for completion. The completion of the User Stories was managed through a [Kanban Board in a GitHuB Project](https://github.com/users/marktodman/projects/4). Based on prioritisation, each User Story was moved through the stages of Todo >> In Progress >> Done. Only one User Story (Automated Testing) currently remains in Todo and all tasks relating to the other User Stories are complete.
 
@@ -364,7 +364,7 @@ Checkout success message to the customer:
 
 ## Profile Page
 
-When users register for the site, a profile is automatically created and the profile icon appears in the navbar. Authenticated users have access to profile page, through which they can manage all of their personal information including full name, email, emergency contact information, medical information, and billing details. This information is stored in the database and automatically retrieved to pre-populate the checkout page. If details are changed (or added0 during checkout this information is also automatically updated in the profile. The profile page also displays any orders, together with a link to the checkout success page containing the detail of each order.
+When users register for the site, a profile is automatically created and the profile icon appears in the navbar. Authenticated users have access to profile page, through which they can manage all of their personal information including full name, email, emergency contact information, medical information, and billing details. This information is stored in the database and automatically retrieved to pre-populate the checkout page. If details are changed (or added) during checkout this information is also automatically updated in the profile. The profile page also displays any orders, together with a link to the checkout success page containing the detail of each order.
 
 <details>
 <summary><strong>Profile Page Features</strong></summary>
