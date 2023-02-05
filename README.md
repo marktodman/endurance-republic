@@ -680,7 +680,7 @@ All JavaScript was passed through [JSHint](https://jshint.com/) to check for err
 
 Manual testing of all site functionality was undertaken throughout production and following deployment of the production site.
 
-All results of manual testing (48 test cases) are recorded in this [Google Sheet](https://docs.google.com/spreadsheets/d/14tIKAgv5rKZdjcnPGnsoGoLWkCGqxY6eJ_GAbqWo2Yc/edit?usp=sharing).
+All results of manual testing (50 test cases) are recorded in this [Google Sheet](https://docs.google.com/spreadsheets/d/14tIKAgv5rKZdjcnPGnsoGoLWkCGqxY6eJ_GAbqWo2Yc/edit?usp=sharing).
 
 ### Stripe
 
